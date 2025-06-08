@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EasyLedger Consultants</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>EasyLedgerr Consultants</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <style>
 * {
@@ -29,10 +29,20 @@ padding: 40px;
 text-align: center;
 }
 
+.logo-title {
+font-size: 2.3rem;
+font-weight: 600;
+color: #2d3436;
+margin-bottom: 20px;
+border-bottom: 3px solid #ff6b6b;
+display: inline-block;
+padding-bottom: 5px;
+}
+
 h1 {
-font-size: 2.5rem;
+font-size: 2rem;
 color: #ff6b6b;
-margin-bottom: 15px;
+margin: 20px 0;
 }
 
 p {
@@ -77,13 +87,39 @@ font-size: 1.1rem;
 color: #2d3436;
 }
 
+.location {
+margin-top: 15px;
+font-size: 1rem;
+color: #636e72;
+}
+
 .emoji {
 font-size: 1.5rem;
 }
 
+/* WhatsApp floating button */
+.whatsapp-float {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background-color: #25D366;
+color: white;
+border-radius: 50px;
+padding: 12px 20px;
+text-decoration: none;
+font-weight: bold;
+box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+z-index: 999;
+font-size: 1rem;
+}
+
 @media (max-width: 600px) {
 h1 {
-font-size: 2rem;
+font-size: 1.8rem;
+}
+
+.logo-title {
+font-size: 1.8rem;
 }
 
 .container {
@@ -93,13 +129,20 @@ padding: 25px;
 p, ul li, .contact {
 font-size: 1rem;
 }
+
+.whatsapp-float {
+font-size: 0.9rem;
+padding: 10px 16px;
+}
 }
 </style>
 </head>
 <body>
 <div class="container">
+<div class="logo-title">EasyLedgerr Consultants</div>
+
 <h1 class="emoji">📊 Simplify Your Finances, Amplify Your Growth 🚀</h1>
-<p>At <span class="highlight">EasyLedger Consultants</span>, we’re more than just number crunchers — we’re your financial growth partners. 💼✨</p>
+<p>At <span class="highlight">EasyLedgerr Consultants</span>, we’re more than just number crunchers — we’re your financial growth partners. 💼✨</p>
 
 <p>🔍 Whether you’re a startup, a growing business, or an established company, our team of expert Chartered Accountants is here to support you with:</p>
 
@@ -116,7 +159,17 @@ font-size: 1rem;
 <div class="contact">
 📧 consultant@easyledgerr.com <br>
 📱 +91-7683978973
+<div class="location">📍Bangalore & Udupi | Serving Globally</div>
 </div>
 </div>
+
+<!-- WhatsApp Chat Button -->
+<a
+href="https://wa.me/917683978973"
+class="whatsapp-float"
+target="_blank"
+>
+💬 Chat with us on WhatsApp
+</a>
 </body>
 </html>
