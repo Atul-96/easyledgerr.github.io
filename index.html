@@ -2,188 +2,117 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="EasyLedgerr Consultants offers expert accounting, tax compliance, and business setup services in Bangalore, Udupi, and globally." />
-<meta name="keywords" content="accounting, tax compliance, GST, business setup, chartered accountants, Bangalore, Udupi" />
-<meta property="og:title" content="EasyLedgerr Consultants" />
-<meta property="og:description" content="Simplify your finances with expert accounting and tax services." />
-<meta property="og:image" content="URL_to_logo_image" /> <!-- Replace with actual logo URL -->
-<link rel="icon" type="image/png" href="favicon.png" /> <!-- Add your favicon -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-<title>EasyLedgerr Consultants</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aalupa – Brand Builder</title>
 <style>
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-
-body {
-font-family: 'Poppins', sans-serif;
-background: linear-gradient(to right, #e6f0fa, #4a90e2); /* Adjusted to match logo blue gradient */
-color: #333;
-padding: 40px 20px;
-scroll-behavior: smooth;
-}
-
-.container {
-max-width: 900px;
-margin: auto;
-background: #ffffff;
-border-radius: 15px;
-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-padding: 40px;
-text-align: center;
-}
-
-.logo-title {
-font-size: 2.3rem;
-font-weight: 600;
-color: #4a90e2; /* Matches logo text color */
-margin-bottom: 20px;
-border-bottom: 3px solid #4a90e2;
-display: inline-block;
-padding-bottom: 5px;
-}
-
-h1 {
-font-size: 2rem;
-color: #4a90e2;
-margin: 20px 0;
-}
-
-p {
-font-size: 1.2rem;
-margin-bottom: 20px;
-line-height: 1.6;
-}
-
-ul {
-text-align: left;
-list-style: none;
-margin: 20px auto;
-padding-left: 0;
-}
-
-ul li {
-background: #e6f0fa; /* Light blue to match theme */
-margin: 10px 0;
-padding: 12px 18px;
-border-left: 5px solid #4a90e2;
-border-radius: 8px;
-font-weight: 500;
-font-size: 1.1rem;
-transition: background 0.3s;
-}
-
-ul li:hover {
-background: #d0e3f7; /* Slightly darker hover effect */
-}
-
-.highlight {
-font-weight: bold;
-color: #6c5ce7;
-}
-
-.contact {
-margin-top: 30px;
-background: #e6f0fa;
-padding: 20px;
-border-radius: 10px;
-font-size: 1.1rem;
-color: #2d3436;
-}
-
-.location {
-margin-top: 15px;
-font-size: 1rem;
-color: #636e72;
-}
-
-.emoji {
-font-size: 1.5rem;
-}
-
-.whatsapp-float {
-position: fixed;
-bottom: 20px;
-right: 20px;
-background-color: #25D366;
-color: white;
-border-radius: 50px;
-padding: 12px 20px;
-text-decoration: none;
-font-weight: bold;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-z-index: 999;
-font-size: 1rem;
-transition: transform 0.3s ease;
-}
-
-.whatsapp-float:hover {
-transform: scale(1.1);
-}
-
-@media (max-width: 600px) {
-h1 {
-font-size: 1.8rem;
-}
-
-.logo-title {
-font-size: 1.8rem;
-}
-
-.container {
-padding: 25px;
-}
-
-p, ul li, .contact {
-font-size: 1rem;
-}
-
-.whatsapp-float {
-font-size: 0.9rem;
-padding: 10px 16px;
-}
+*, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
+body { font-family: sans-serif; line-height:1.6; color:#111; }
+header { position: fixed; top:0; width:100%; background:#fff; z-index:100; padding:1rem; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #ddd; }
+header .menu-btn { display:none; font-size:1.5rem; cursor:pointer; }
+nav ul { list-style:none; display:flex; gap:1.5rem; }
+nav a { text-decoration:none; color:#111; font-weight:600; }
+.hero { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; background:#f5f5f5; padding:2rem; }
+.hero h1 { font-size:3rem; margin-bottom:1rem; }
+.hero p { font-size:1.25rem; max-width:600px; margin-bottom:2rem; }
+.counter { display:flex; justify-content: center; gap:3rem; padding:2rem 0; background:#fff; }
+.counter div { text-align:center; }
+.counter div span { display:block; font-size:2rem; font-weight:700; }
+.services, .portfolio, .testimonials, .cta, footer { padding:4rem 2rem; }
+.services .item, .portfolio .item { flex:1 1 300px; margin:1rem; background:#fafafa; padding:1.5rem; border-radius:8px; }
+.services, .portfolio { display:flex; flex-wrap:wrap; justify-content:center; }
+.testimonials blockquote { font-style:italic; margin-bottom:1rem; }
+.cta { text-align:center; background:#eee; }
+.cta button { padding:1rem 2rem; font-size:1.1rem; border:none; background:#000; color:#fff; cursor:pointer; border-radius:4px; }
+footer { text-align:center; background:#222; color:#fff; }
+@media (max-width:768px) {
+header nav { display:none; }
+header .menu-btn { display:block; }
+nav.mobile-active { position:fixed; top:60px; right:0; background:#fff; width:200px; box-shadow:-2px 0 4px rgba(0,0,0,0.1); display:block; }
+nav.mobile-active ul { flex-direction:column; }
 }
 </style>
 </head>
 <body>
+
 <header>
-<div class="container">
-<div class="logo-title">EasyLedgerr Consultants</div>
-</div>
-</header>
-<main>
-<div class="container">
-<h1 class="emoji">📊 Simplify Your Finances, Amplify Your Growth 🚀</h1>
-<p>At <span class="highlight">EasyLedgerr Consultants</span>, we’re more than just number crunchers — we’re your financial growth partners. 💼✨</p>
-
-<p>🔍 Whether you’re a startup, a growing business, or an established company, our team of expert Chartered Accountants is here to support you with:</p>
-
+<a href="#" class="logo">Aalupa</a>
+<div class="menu-btn" onclick="toggleNav()">☰</div>
+<nav id="nav">
 <ul>
-<li>✅ End-to-end Accounting & Payroll</li>
-<li>✅ Hassle-free GST & Tax Compliance</li>
-<li>✅ Smart Business Setup & Compliance</li>
-<li>✅ Strategic Tax Planning & Advisory</li>
-<li>✅ Cloud-based Automation with Zoho | Tally | QuickBooks</li>
+<li><a href="#services">Services</a></li>
+<li><a href="#work">Our Work</a></li>
+<li><a href="#academy">Academy</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
+</nav>
+</header>
 
-<p>📈 Let us handle the backend while you focus on scaling your business!</p>
+<section class="hero">
+<h1>We transform your Product into a Brand</h1>
+<p>Your journey from idea to brand identity, packaging, UI/UX, and growth—all under one roof.</p>
+<button onclick="document.getElementById('contact').scrollIntoView()">Let's Talk</button>
+</section>
 
-<div class="contact">
-<a href="mailto:consultant@easyledger.com">📧 consultant@easyledger.com</a> <br>
-<a href="tel:7683978973">📱 +91-7683978973</a>
-<div class="location">📍 Bangalore & Udupi | Serving Globally</div>
+<section class="counter">
+<div><span id="count1">0</span>+<br>Brands Built</div>
+<div><span id="count2">0</span>+<br>Creative Campaigns</div>
+<div><span id="count3">0</span>+<br>Happy Clients</div>
+</section>
+
+<section id="services" class="services">
+<div class="item">
+<h3>Brand Identity</h3>
+<p>Logo design, brand style guides and packaging that resonate.</p>
 </div>
+<div class="item">
+<h3>Brand Asset Management</h3>
+<p>Maintain consistency across online and offline brand touchpoints.</p>
 </div>
-</main>
+<div class="item">
+<h3>Brand Mentorship</h3>
+<p>Guided ideation and brainstorming sessions tailored to your goals.</p>
+</div>
+</section>
 
-<!-- WhatsApp Chat Button -->
-<a href="https://wa.me/917683978973?text=Hi%20EasyLedgerr%20Consultants!%20I%27d%20like%20to%20learn%20more%20about%20your%20services." class="whatsapp-float" target="_blank">
-💬 Contact us on WhatsApp
-</a>
+<section id="work" class="portfolio">
+<!-- Example Portfolio Items -->
+<div class="item"><h4>Project Alpha</h4><p>Brand overhaul for AAA Corp</p></div>
+<div class="item"><h4>Silveransh</h4><p>Jewellery branding & logo design</p></div>
+<div class="item"><h4>Beta Packaging</h4><p>Minimalist packaging for premium foods</p></div>
+</section>
+
+<section class="testimonials">
+<blockquote>
+“Working with Aalupa was smooth and impactful—their designs removed all guesswork.”
+<br>— Client Name, CEO of XYZ
+</blockquote>
+</section>
+
+<section class="cta">
+<h2>Your vision matters to us</h2>
+<button onclick="document.getElementById('contact').scrollIntoView()">Get in touch</button>
+</section>
+
+<footer id="contact">
+<p>hello@aalupa.com · Follow us on LinkedIn · Instagram · YouTube</p>
+<p>&copy; 2025 Aalupa. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleNav() {
+document.getElementById('nav').classList.toggle('mobile-active');
+}
+// Simple counter animation
+[ {id:'count1',end:42}, {id:'count2',end:120}, {id:'count3',end:200} ].forEach(obj => {
+let el = document.getElementById(obj.id), count = 0;
+let step = () => {
+count += Math.ceil(obj.end/100);
+if(count < obj.end){ el.textContent = count; requestAnimationFrame(step); }
+else el.textContent = obj.end;
+};
+step();
+});
+</script>
+
 </body>
 </html>
