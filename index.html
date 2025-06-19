@@ -1,118 +1,242 @@
-<!DOCTYPE html>
-<html lang="en">
+"<!DOCTYPE html>
+<html lang=""en"">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aalupa – Brand Builder</title>
+<meta charset=""UTF-8"" />
+<meta name=""viewport"" content=""width=device-width, initial-scale=1"">
+<title>easyledgerr – Brand Builder</title>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
-body { font-family: sans-serif; line-height:1.6; color:#111; }
-header { position: fixed; top:0; width:100%; background:#fff; z-index:100; padding:1rem; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #ddd; }
+body { font-family: 'Segoe UI', sans-serif; line-height:1.6; color:#111; scroll-behavior: smooth; }
+header { position: fixed; top:0; width:100%; background:#fff; z-index:100; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #ddd; }
 header .menu-btn { display:none; font-size:1.5rem; cursor:pointer; }
 nav ul { list-style:none; display:flex; gap:1.5rem; }
 nav a { text-decoration:none; color:#111; font-weight:600; }
-.hero { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; background:#f5f5f5; padding:2rem; }
-.hero h1 { font-size:3rem; margin-bottom:1rem; }
-.hero p { font-size:1.25rem; max-width:600px; margin-bottom:2rem; }
-.counter { display:flex; justify-content: center; gap:3rem; padding:2rem 0; background:#fff; }
+.hero {
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?fit=crop&w=1950&q=80') no-repeat center center/cover;
+color: #fff;
+padding:2rem;
+}
+.hero h1 { font-size:3rem; margin-bottom:1rem; animation: fadeInUp 1s ease forwards; }
+.hero p { font-size:1.25rem; max-width:600px; margin-bottom:2rem; opacity: 0; animation: fadeInUp 1s 0.5s ease forwards; }
+.hero button {
+padding: 1rem 2rem;
+font-size: 1.1rem;
+background-color: #fff;
+color: #111;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-weight: bold;
+transition: transform 0.3s ease;
+opacity: 0;
+animation: fadeInUp 1s 1s ease forwards;
+}
+.hero button:hover { transform: scale(1.05); }
+
+@keyframes fadeInUp {
+from { opacity: 0; transform: translateY(30px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+.counter {
+display:flex;
+justify-content: center;
+gap:3rem;
+padding:4rem 1rem;
+background:#fff;
+}
 .counter div { text-align:center; }
-.counter div span { display:block; font-size:2rem; font-weight:700; }
-.services, .portfolio, .testimonials, .cta, footer { padding:4rem 2rem; }
-.services .item, .portfolio .item { flex:1 1 300px; margin:1rem; background:#fafafa; padding:1.5rem; border-radius:8px; }
-.services, .portfolio { display:flex; flex-wrap:wrap; justify-content:center; }
-.testimonials blockquote { font-style:italic; margin-bottom:1rem; }
-.cta { text-align:center; background:#eee; }
-.cta button { padding:1rem 2rem; font-size:1.1rem; border:none; background:#000; color:#fff; cursor:pointer; border-radius:4px; }
-footer { text-align:center; background:#222; color:#fff; }
+.counter div span { display:block; font-size:2rem; font-weight:700; color: #0d6efd; }
+
+.services, .portfolio, .testimonials, .cta, footer {
+padding:4rem 2rem;
+max-width: 1200px;
+margin: auto;
+}
+
+.services .item, .portfolio .item {
+flex:1 1 300px;
+margin:1rem;
+background:#fafafa;
+padding:1.5rem;
+border-radius:8px;
+transition: all 0.3s ease;
+}
+.services, .portfolio {
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+.services .item:hover, .portfolio .item:hover {
+transform: translateY(-5px);
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.testimonials blockquote {
+font-style:italic;
+margin-bottom:1rem;
+text-align: center;
+font-size: 1.2rem;
+max-width: 800px;
+margin: auto;
+}
+
+.cta {
+text-align:center;
+background:#eee;
+border-radius: 8px;
+}
+
+.cta button {
+padding:1rem 2rem;
+font-size:1.1rem;
+border:none;
+background:#111;
+color:#fff;
+cursor:pointer;
+border-radius:4px;
+transition: transform 0.3s ease;
+}
+
+.cta button:hover { transform: scale(1.05); }
+
+footer {
+text-align:center;
+background:#222;
+color:#fff;
+padding: 2rem 1rem;
+}
+
+/* Responsive */
 @media (max-width:768px) {
 header nav { display:none; }
 header .menu-btn { display:block; }
-nav.mobile-active { position:fixed; top:60px; right:0; background:#fff; width:200px; box-shadow:-2px 0 4px rgba(0,0,0,0.1); display:block; }
-nav.mobile-active ul { flex-direction:column; }
+nav.mobile-active {
+position:fixed;
+top:60px;
+right:0;
+background:#fff;
+width:200px;
+box-shadow:-2px 0 4px rgba(0,0,0,0.1);
+display:block;
+z-index: 1000;
 }
+nav.mobile-active ul { flex-direction:column; padding:1rem; }
+}
+
+/* Scroll reveal */
+.reveal { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+.reveal.show { opacity: 1; transform: translateY(0); }
 </style>
 </head>
 <body>
 
 <header>
-<a href="#" class="logo">Aalupa</a>
-<div class="menu-btn" onclick="toggleNav()">☰</div>
-<nav id="nav">
+<a href=""#"" class=""logo"">easyledgerr</a>
+<div class=""menu-btn"" onclick=""toggleNav()"">☰</div>
+<nav id=""nav"">
 <ul>
-<li><a href="#services">Services</a></li>
-<li><a href="#work">Our Work</a></li>
-<li><a href="#academy">Academy</a></li>
-<li><a href="#contact">Contact</a></li>
+<li><a href=""#services"">Services</a></li>
+<li><a href=""#work"">Our Work</a></li>
+<li><a href=""#academy"">Academy</a></li>
+<li><a href=""#contact"">Contact</a></li>
 </ul>
 </nav>
 </header>
 
-<section class="hero">
+<section class=""hero"">
 <h1>We transform your Product into a Brand</h1>
 <p>Your journey from idea to brand identity, packaging, UI/UX, and growth—all under one roof.</p>
-<button onclick="document.getElementById('contact').scrollIntoView()">Let's Talk</button>
+<button onclick=""document.getElementById('contact').scrollIntoView()"">Let's Talk</button>
 </section>
 
-<section class="counter">
-<div><span id="count1">0</span>+<br>Brands Built</div>
-<div><span id="count2">0</span>+<br>Creative Campaigns</div>
-<div><span id="count3">0</span>+<br>Happy Clients</div>
+<section class=""counter reveal"">
+<div><span id=""count1"">0</span>+<br>Brands Built</div>
+<div><span id=""count2"">0</span>+<br>Creative Campaigns</div>
+<div><span id=""count3"">0</span>+<br>Happy Clients</div>
 </section>
 
-<section id="services" class="services">
-<div class="item">
+<section id=""services"" class=""services reveal"">
+<div class=""item"">
 <h3>Brand Identity</h3>
 <p>Logo design, brand style guides and packaging that resonate.</p>
 </div>
-<div class="item">
+<div class=""item"">
 <h3>Brand Asset Management</h3>
 <p>Maintain consistency across online and offline brand touchpoints.</p>
 </div>
-<div class="item">
+<div class=""item"">
 <h3>Brand Mentorship</h3>
 <p>Guided ideation and brainstorming sessions tailored to your goals.</p>
 </div>
 </section>
 
-<section id="work" class="portfolio">
-<!-- Example Portfolio Items -->
-<div class="item"><h4>Project Alpha</h4><p>Brand overhaul for AAA Corp</p></div>
-<div class="item"><h4>Silveransh</h4><p>Jewellery branding & logo design</p></div>
-<div class="item"><h4>Beta Packaging</h4><p>Minimalist packaging for premium foods</p></div>
+<section id=""work"" class=""portfolio reveal"">
+<div class=""item""><h4>Project Alpha</h4><p>Brand overhaul for AAA Corp</p></div>
+<div class=""item""><h4>Silveransh</h4><p>Jewellery branding & logo design</p></div>
+<div class=""item""><h4>Beta Packaging</h4><p>Minimalist packaging for premium foods</p></div>
 </section>
 
-<section class="testimonials">
+<section class=""testimonials reveal"">
 <blockquote>
-“Working with Aalupa was smooth and impactful—their designs removed all guesswork.”
+“Working with easyledgerr was smooth and impactful—their designs removed all guesswork.”
 <br>— Client Name, CEO of XYZ
 </blockquote>
 </section>
 
-<section class="cta">
+<section class=""cta reveal"">
 <h2>Your vision matters to us</h2>
-<button onclick="document.getElementById('contact').scrollIntoView()">Get in touch</button>
+<button onclick=""document.getElementById('contact').scrollIntoView()"">Get in touch</button>
 </section>
 
-<footer id="contact">
-<p>hello@aalupa.com · Follow us on LinkedIn · Instagram · YouTube</p>
-<p>&copy; 2025 Aalupa. All rights reserved.</p>
+<footer id=""contact"">
+<p>hello@easyledgerr.com · Follow us on LinkedIn · Instagram · YouTube</p>
+<p>&copy; 2025 easyledgerr. All rights reserved.</p>
 </footer>
 
 <script>
 function toggleNav() {
 document.getElementById('nav').classList.toggle('mobile-active');
 }
-// Simple counter animation
-[ {id:'count1',end:42}, {id:'count2',end:120}, {id:'count3',end:200} ].forEach(obj => {
-let el = document.getElementById(obj.id), count = 0;
-let step = () => {
-count += Math.ceil(obj.end/100);
-if(count < obj.end){ el.textContent = count; requestAnimationFrame(step); }
-else el.textContent = obj.end;
+
+// Animated counters
+const counters = [
+{id:'count1',end:42},
+{id:'count2',end:120},
+{id:'count3',end:200}
+];
+counters.forEach(obj => {
+const el = document.getElementById(obj.id);
+let count = 0;
+const step = () => {
+count += Math.ceil(obj.end / 100);
+if(count < obj.end){
+el.textContent = count;
+requestAnimationFrame(step);
+} else {
+el.textContent = obj.end;
+}
 };
 step();
 });
+
+// Reveal animation
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 
 </body>
-</html>
+</html>"
